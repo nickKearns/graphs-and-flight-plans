@@ -32,11 +32,8 @@ if __name__ == "__main__":
 
 
     graph.add_edge(airport_SEA.get_id(), airport_SFO.get_id(), 5)
-    # graph.add_edge(airport_SFO.get_id(), airport_SEA.get_id(), 5)
     graph.add_edge(airport_SFO.get_id(), airport_LAX.get_id(), 5)
-    # graph.add_edge(airport_LAX.get_id(), airport_SFO.get_id(), 5)
     graph.add_edge(airport_LAX.get_id(), airport_LAS.get_id(), 5)
-    # graph.add_edge(airport_LAS.get_id(), airport_LAX.get_id(), 5)
     graph.add_edge(airport_SFO.get_id(), airport_LAS.get_id(), 8)
     graph.add_edge(airport_LAS.get_id(), airport_DEN.get_id(), 2)
     graph.add_edge(airport_DEN.get_id(), airport_ORD.get_id(), 5)
@@ -46,13 +43,14 @@ if __name__ == "__main__":
     graph.add_edge(airport_DFW.get_id(), airport_ORD.get_id(), 15)
     graph.add_edge(airport_DFW.get_id(), airport_ATL.get_id(), 10)
     graph.add_edge(airport_ATL.get_id(), airport_JFK.get_id(), 30)
-    # graph.add_edge(airport_BOS.get_id(), airport_JFK.get_id(), 2)
     graph.add_edge(airport_BOS.get_id(), airport_ATL.get_id(), 15)
     graph.add_edge(airport_BOS.get_id(), airport_SFO.get_id(), 50)
 
+
+  
+
+
     print(graph.find_shortest_path('SFO', 'BOS'))
     print(graph.minimum_spanning_tree_kruskal())
-    print("      ")
     print(graph.floyd_warshall())
-    graph.kosaraju_find_SCC()
     
